@@ -42,14 +42,30 @@ textInput.addEventListener('keypress', (e) => {
     }
 });
 
-// Optional download feature helper
-downloadBtn.addEventListener('click', () => {
-    if (qrImage.src) {
+// Fixed Download Feature using fetch & Blob
+downloadBtn.addEventListener('click', async () => {
+    if (!qrImage.src) return;
+
+    try {
+        // Fetch image data as Blob
+        const response = await fetch(qrImage.src);
+        const blob = await response.blob();
+        
+        // Create local Object URL
+        const blobUrl = URL.createObjectURL(blob);
+
+        // Trigger Download
         const link = document.createElement('a');
-        link.href = qrImage.src;
+        link.href = blobUrl;
         link.download = 'qrcode.png';
         document.body.appendChild(link);
         link.click();
+        
+        // Clean up
         document.body.removeChild(link);
+        URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+        alert("Failed to download image. Try right-clicking the QR code and selecting 'Save Image As'.");
+        console.error("Download Error:", error);
     }
 });
