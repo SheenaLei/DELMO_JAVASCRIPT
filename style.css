@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fce8f3 0%, #f3e5f5 100%);
+    color: #4a2e35;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.header {
+    background: linear-gradient(135deg, #d87093, #ba55d3);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(186, 85, 211, 0.2);
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(186, 85, 211, 0.15);
+    border: 1px solid #f3d1f0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: 500;
+    color: #8b008b;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    padding: 12px 18px;
+    border: 2px solid #d8bfd8;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #4a2e35;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ba55d3;
+    box-shadow: 0 0 8px rgba(186, 85, 211, 0.3);
+}
+
+#generateBtn, .download-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #ba55d3;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+#generateBtn:hover, .download-btn:hover {
+    background-color: #9932cc;
+    transform: translateY(-2px);
+}
+
+.output-card {
+    text-align: center;
+}
+
+.output-card h3 {
+    color: #8b008b;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.qr-container {
+    background-color: #fce8f3;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    margin-bottom: 15px;
+}
+
+.placeholder-text {
+    color: #886070;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+#qrImage {
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.download-btn {
+    background-color: #ffb6c1;
+    color: #4a2e35;
+}
+
+.download-btn:hover {
+    background-color: #ff69b4;
+    color: white;
+}

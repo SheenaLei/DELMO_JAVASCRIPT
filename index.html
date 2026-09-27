@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1>✨ QR Code Generator</h1>
+        <p>Type any text, link, or message to generate your custom QR code instantly!</p>
+    </header>
+
+    <main class="container">
+        <!-- Input Section -->
+        <div class="card input-card">
+            <div class="input-group">
+                <label for="textInput">Enter text or URL:</label>
+                <input type="text" id="textInput" placeholder="e.g., https://github.com or Hello World!">
+            </div>
+            <button id="generateBtn">Generate QR Code</button>
+        </div>
+
+        <!-- Output Section -->
+        <div class="card output-card">
+            <h3>Your Generated QR Code</h3>
+            <div class="qr-container">
+                <p id="placeholderText" class="placeholder-text">Your QR code will appear here...</p>
+                <img id="qrImage" src="" alt="QR Code" style="display: none;">
+            </div>
+            <button id="downloadBtn" class="download-btn" style="display: none;">Download QR Code</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
